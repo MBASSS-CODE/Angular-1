@@ -13,7 +13,9 @@
     Description : {{ product.description }}
   </p>
 
-  <p *ngIf="product && product.price > 700"></p>
+  <app-product-alerts
+    [product]="product">
+  </app-product-alerts>
 
   <button (click)="share()">
     Share
