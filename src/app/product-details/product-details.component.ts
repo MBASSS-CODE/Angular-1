@@ -11,9 +11,17 @@ import {Product, products} from '../products';
 })
 export class ProductDetailsComponent implements OnInit {
 
-  constructor() { }
+  product : any;
+
+  constructor(private route:ActivatedRoute) { }
 
   ngOnInit() {
+
+    const routeParams = this.route.snapshot.paramMap;
+    const productIdFromRoute = Number(routeParams.get('productId'));
+
+    this.product = products.find(product => product.id === productIdFromRoute);
+
   }
 
 }
