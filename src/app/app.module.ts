@@ -27,6 +27,7 @@ import { CommonModule } from '@angular/common';
     TopBarComponent,
     ProductListComponent,
     ProductAlertsComponent,
+    CartComponent
   ],
   bootstrap: [
     AppComponent
