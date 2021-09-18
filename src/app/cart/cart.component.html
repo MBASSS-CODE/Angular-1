@@ -5,4 +5,9 @@
   <span>{{ item.price }}</span> 
 </div>
 
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+  <button class="button" type="submit">Purchase</button>
+</form>
+
 <a routerLink="/shipping">Shipping cost</a>
